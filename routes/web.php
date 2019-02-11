@@ -21,8 +21,14 @@
 //     return view('welcome');
 // })->where('path', '.*')->name('react');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::resource('items', 'ItemController');
+// Route::resource('items', 'ItemController');
+
+
+Route::get('/{path?}', function($path = null){ 
+	return View::make('welcome'); 
+})->where('path', '.*');
+
